@@ -45,7 +45,9 @@ and [Next.js](https://nextjs.org/), который предназначен дл
 
 На видео можно увидеть возможности приложения
 
-
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=6IsvkixgOjs" target="_blank">
+ <img src="assets/Thumbnail.png" alt="Видео" width="960" height="480" border="10" />
+</a>
 
 ## Установка и настройка
 
