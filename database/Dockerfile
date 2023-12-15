@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM postgres:16
 
 # Expose the default PostgreSQL port
 EXPOSE 5432

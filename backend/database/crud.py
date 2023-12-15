@@ -146,12 +146,12 @@ def sort_by_rating(db: Session, from_rating: int, to_rating: int, order: str = "
                         models.Book.rating <= to_rating)
                 .order_by(models.Book.rating.desc())
                 .all())
-    else:
-        return (db.query(models.Book)
-                .filter(models.Book.rating >= from_rating,
-                        models.Book.rating <= to_rating)
-                .order_by(models.Book.rating.asc())
-                .all())
+
+    return (db.query(models.Book)
+            .filter(models.Book.rating >= from_rating,
+                    models.Book.rating <= to_rating)
+            .order_by(models.Book.rating.asc())
+            .all())
 
 
 def sort_by_price(db: Session, from_price: float, to_price: float, order: str = "desc") -> Optional[List[schemas.Book]]:
@@ -169,12 +169,12 @@ def sort_by_price(db: Session, from_price: float, to_price: float, order: str = 
                         models.Book.price <= to_price)
                 .order_by(models.Book.price.desc())
                 .all())
-    else:
-        return (db.query(models.Book)
-                .filter(models.Book.price >= from_price,
-                        models.Book.price <= to_price)
-                .order_by(models.Book.price.asc())
-                .all())
+
+    return (db.query(models.Book)
+            .filter(models.Book.price >= from_price,
+                    models.Book.price <= to_price)
+            .order_by(models.Book.price.asc())
+            .all())
 
 
 def find_by_upc(db: Session, upc: str) -> Union[Type[Book], None]:
